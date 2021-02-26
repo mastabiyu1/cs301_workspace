@@ -3,7 +3,13 @@
 // 123 6
 // 102 3
 // 8 8
-const prompt = require('prompt-sync')();
-let num = +prompt('please enter number: ');
+let prompt = require('prompt-sync')();
+let num=prompt('please enter number: ');
+let sum=0;
+for(let i=0;i<num.length;i++){
+  let x = parseInt(num.charAt(i));
 
-  num.charAt
+  sum=sum+x;
+}
+console.log(sum);
+    

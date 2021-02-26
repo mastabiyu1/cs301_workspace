@@ -64,14 +64,13 @@
 
     //  }
     // console.log(" “Sorry but you have beenlocked out.”");
-    let row;
-    for(let i = 5 ; i >= 1 ; i--){
-          row="";
-        for(let j = 1 ; j <= i ; j++){
-               row += i;
-          // console.log(row);
-        }
-        console.log(row);
+let prompt = require('prompt-sync')();
+let num=prompt('please enter number: ');
+let sum=0;
+for(let i=0;i<num.length;i++){
+  let x = parseInt(num.charAt(i));
 
-    }
+  sum=sum+x;
+}
+console.log(sum);
     
