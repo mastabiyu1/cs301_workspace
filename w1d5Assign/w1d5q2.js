@@ -1,19 +1,26 @@
-///w1d5Q1
-function areaOfCircule(r){
+      "use strict";
+/**
+ * 
+ * @param {radius} rad; 
+ * @return {area} area;
+ */
+function areaOfCircule(rad){
       
     let area;
- area = Math.PI * Math.pow(r,2);
+ area = Math.PI * Math.pow(rad,2);
  return area;
 }
 console.log(areaOfCircule(10));
 
 
-///w1d5
-
-function volumeOfCircule(h){
-
-let volume;
-volume = areaOfCircule(10)*h;
- return volume;  
+/**
+ * 
+ * areaOfCircule @param {rad};
+ * @param {height} hig; 
+ * @return {vol}; 
+ */
+function volumeOfCyclinder(hig){
+let vol = areaOfCircule() * hig;
+ return vol;  
 }
-console.log(volumeOfCircule(10));
+console.log(volumeOfCyclinder());

@@ -105,19 +105,20 @@
 // Proper divisors of 6 are 1, 2, 3
 // Sum of its proper divisors = 1 + 2 + 3 = 6.
 // Hence 6 is a perfect number.
-// let number = prompt('please enter the number:');
-// let sum = 0;
-// for(let i = 1; i < number ; i++){
-//   if(number % i === 0){
-//     sum=sum + i;
-//   }
-// }
-// console.log(sum===number);
-// if(sum===number){
-//   console.log('perfect number');
-// }else{
-//        console.log('not perfect number');
-//   }
+const prompt = require('prompt-sync')();
+let number = +prompt('please enter the number:');
+let sum = 0;
+for(let i = 1; i < number ; i++){
+  if(number % i === 0){
+    sum+=i;
+  }
+}
+console.log(sum===number);
+if(sum===number){
+  console.log('perfect number');
+}else{
+       console.log('not perfect number');
+  }
 // prompt('please enter the number of class members')
  
 // function reverseDigit(n){
@@ -132,24 +133,24 @@
 // console.log(reverse);
 // //console.log(reverseDigit(123));
 // reverseDigit(123);
-//////////////////////////////////////////////////////////
-///w1d5q1-a
-// function checkPrime(n){
-//    if( n === 1 ){
-//       return false;    
-//     }else if(n === 2){
-//     return true;
-//     }else  {
-//      for(let i = 2; i < n ; i++){
-//           if(n % i === 0){
-//             return false;
-//           }
-//      }
-//      return true;
-//    }
-// }
-// console.log(checkPrime(8));
-// ///// w1d5q
+////////////////////////////////////////////////////////
+///w1d5q1-a //function checkPrime(n){
+function isPrime(n){
+   if( n <= 1 ){
+      return false;    
+    }else if(n === 2){
+    return true;
+    }else  {
+     for(let i = 2; i < n ; i++){
+          if(n % i === 0){
+            return false;
+          }
+     }
+     return true;
+   }
+}
+console.log(isPrime(8));
+///// w1d5q
 // const prompt = require('prompt-sync');
 // let num = prompt('please enter number: ');
 //   if(checkPrime(num)===true){
@@ -194,15 +195,101 @@
 // console.log( 'the total volume of the house is: ' + totalVolume);
 
 /////////////////////////////hcf of two numbers////////////////////////////////////////////
+  
+// program to print a text
+// declaring a function
+// program to print a text
+// declaring a function
+// program to print a text
+// declaring a function
+// function greet() {
+//   console.log("Hello there!");
+// }
 
+// // calling the function
+// greet();
 
+//const prompt = require('prompt-sync')();
+//let n1 = prompt('please enter the first number: ');
+// let n2 = prompt('please enter the second number: ');
+// let num = 0;
+// for(let i = 1 ; i <= n1 || i <= n2; i++ ){
 
+//      if(n1 % i===0 && n2 % i ===0){
+//        num = i;
+//        console.log(i);
+//      }
+// }
+//     console.log(num);
+// console.log('++++++++++++++++++++++++++++++++++++++++++++');
+// ///////////////////////////////////////////////////
 
+// function Hcf(a,b){
 
+//   for(let i = 1;  i <= a || i <= b ; i++ ){
+//         if(a % i === 0 && b % i === 0){
+//             return i;
+//         }
+//   }
+//   return;
+// }
+// console.log(Hcf(6,12));
 
+//const prompt = require('prompt-sync')();
+// let numOfStudents = +prompt('please enter the number of students: ');
+// let numOfStudentperteam;
+// let numOfTeams;
+// let teamSize= Math.floor(numOfStudents / numOfteams);
+// let extraStudents = numOfStudents % numOfTeams;
+// let teamWithExteaStudents = extraStudents;
+// let numOfLargerTeam;
+// let numOfexactTeam;
+// console.log($(teamwithExtraStudents} teams of $(initialTeamSize+1} and
+//    teamWithStandardTeamSize) ))
 
+function reverse(x){
+  let reversedDigits ="";
+  while(x > 0){
+    let LastDigit = x % 10;
+    reversedDigits += LastDigit;
+    x = Math.floor(x/10);
+  }
+  return Number(reversedDigits);
+}
+ function isPrime(n){
+   for(let i=2; i<n; i++){
+     if(n % i===0){
+         false;
+     }
+   }
+   return true;
+ }
 
+ function isReversedPrime(n){
+   let reversedNum =reverse(n);
+   let result  = isPrime(reversedNum);
+   return result;
+ }
+ console.log(isReversedPrime(32));
 
+ ////////////////////////////////////
+//let radius;
 
+  //   do{
+  // radius = prompt('please enter radius: ');
 
+  //         radius=parseFloat(radius);
 
+  //   }while(radius <= 0)
+  //   let area =Math.PI*Math.pow(radius,2);
+  //   console.log(area);
+    //////////////////////////////////////////
+    let radius;
+
+    while(radius <= 0){
+      radius = prompt('please enter radius: ');
+
+        radius=parseFloat(radius);
+      let area =Math.PI*Math.pow(radius,2);
+    console.log(area);
+    }
