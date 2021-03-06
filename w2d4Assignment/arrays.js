@@ -31,7 +31,7 @@ function isArrayEqual(arr1, arr2){
       sum= arr[0] + arr[arr.length-1];
   }
   return sum;
-
+  }
   /**
  * @return {number} returns the middle number;
  * @param {Object} arr; 
@@ -45,7 +45,24 @@ function getMiddle(arr){
             return arr[(arr.length + 1)/2 -1];
         }
     }
-}
-console.log(getMiddle([1,2,3,4,5,6,7]));
 
-module.exports= {isArrayEqual, addend ,getMiddle};
+}
+
+ /**
+    * @param {Object} arr4 ;
+    * @returns {number};
+    * @param {number}num the number fo rotations;
+    */
+   function rotateElementsLeft(arr4,num){
+    if(num === arr4.length){
+        return arr4;
+    }else if(num > arr4.length){
+        num = num % arr4.length;
+    }
+    for(let i=0;i<num;i++){
+        arr4.unshift(arr4.pop());
+    }
+   return arr4;
+  }
+
+module.exports= {isArrayEqual, addend, getMiddle, rotateElementsLeft };

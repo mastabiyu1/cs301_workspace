@@ -2,13 +2,17 @@
    /**
     * @param {Object} arr4 ;
     * @returns {number};
-    * 
+    * @param {number}num the number fo rotations;
     */
-   function rotateElements(arr4){
-     //  let arrc=[];
-   for(let i=0; i<arr4.length; i++){
-      arr4.shift(i-1);
-        //arr4[arr4.length-1] = arr4[i];
-       // arrc[i-1]=arr4[i];
-   }
-}console.log(rotateElements([1,2,3]));
+   function rotateElementsLeft(arr4,num){
+  if(num === arr4.length){
+      return arr4;
+  }else if(num > arr4.length){
+      num = num % arr4.length;
+  }
+  for(let i=0;i<num;i++){
+      arr4.unshift(arr4.pop());
+  }
+ return arr4;
+}
+console.log(rotateElementsLeft([1,2,3],2));
