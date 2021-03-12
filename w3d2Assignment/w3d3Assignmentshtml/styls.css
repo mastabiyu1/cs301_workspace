@@ -1,0 +1,23 @@
+
+
+h1{color:red}
+h2{color:rgb{128,0,196}
+h3{color: #f80}
+
+p{
+
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+
+}
+p{
+    /* the font propety is a shorthand for font-style,font-variant,font-weight/line-hight,font-family*/
+    font: 14px Areial, sans-serif;
+}
+h1{
+    background-color: rgb(red, green, blue);
+    background-repeat: initial;  
+}

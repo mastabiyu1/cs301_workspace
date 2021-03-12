@@ -4,9 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Review</title>
+ <script></script>
+             function computer(){
+                 let userInput= document.getElementById("input").value;
+                 let splitted = userInput.split(" ,");
+                 let sum =sum(splitted);
+                 document.getElementById("sum").innerHTML = sum;
+                 document.getElementById("Avg").innerHTML = sum/splited.length;
+
+             }
+
+             function sum (arr){
+                 sum=0;
+                 for(let n of arr){
+                     sum+=Number(s);
+                 }
+                 return sum;
+             }
+
 </head>
+<p1>My name  </p1>
+<p2></p2>
 <body>
-    
+    Enter values comma separated:<br>
+    <textarea id="input"></textarea><br>
+    <button onclick="computer()">Computer</button>
+    sum:<span id ="sum">+</span>         
+    Avg:<span id="Avg"></span>
+
 </body>
 </html>
